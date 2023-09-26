@@ -163,6 +163,10 @@ body {
 }
 
 @media only screen and (max-width: 450px) {
+    .first-page-container {
+        width: 90%;
+    }
+
     .game-name {
         font-size: 2em;
     }

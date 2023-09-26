@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles_2nd_page.css">
     <title>Tic Tac Toe</title>
 </head>
 <body>
-    <!--first page start-->
-    <div class="first-page-container">
+    <!--first page starts-->
+    <div class="first-page-container" style="display:none;">
         <div class="name-marks-section">
             <h1 class="game-name">TIC <span>TAC</span> TOE</h1>
         </div>
@@ -32,6 +34,68 @@
             
         </div>
     </div>
-    <!--first page end-->
+    <!--first page ends-->
+    <!--second page starts-->
+    <div class="second-page-container">
+        <div class="top-part">
+            <div class="x-o-logo">
+                <p class="X-logo logo-marks">X</p>
+                <p class="O-logo logo-marks">O</p>
+            </div>
+            <div class="whos-turn">
+                <p class="current-players-mark">X</p>
+                <p class="turn">Turn</p>
+            </div>
+            <div class="back-button">
+                <span class="material-symbols-outlined undo">undo</span>
+            </div>
+        </div>
+        <div class="game-area-wrapper">
+            <div class="game-area">
+                <div class="square">
+                    <button class="game-square">X</button>
+                </div>
+                <div class="square">
+                    <button class="game-square">O</button>
+                </div>
+                <div class="square">
+                    <button class="game-square">X</button>
+                </div>
+                <div class="square">
+                    <button class="game-square">O</button>
+                </div>
+                <div class="square">
+                    <button class="game-square">X</button>
+                </div>
+                <div class="square">
+                    <button class="game-square">O</button>
+                </div>
+                <div class="square">
+                    <button class="game-square">X</button>
+                </div>
+                <div class="square">
+                    <button class="game-square">O</button>
+                </div>
+                <div class="square">
+                    <button class="game-square">X</button>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-part">
+            <div class="you-won bottom-results">
+                <p class="you">X (you)</p>
+                <p class="won-times number-result">34</p>
+            </div>
+            <div class="tie bottom-results">
+                <p class="ties">Ties</p>
+                <p class="tie-times number-result">40</p>
+            </div>
+            <div class="opponent-won bottom-results">
+                <p class="opponent">O (cpu)</p>
+                <p class="lost-times number-result">20</p>
+            </div>
+        </div>
+    </div>
+    <!--second page ends-->
 </body>
 </html>

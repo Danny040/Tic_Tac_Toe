@@ -1,0 +1,158 @@
+:root {
+    --x-color: #a55eea;
+    --o-color: #26de81;
+}
+
+.second-page-container {
+    width: 95%;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-part {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin:20px auto;
+}
+
+.x-o-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-marks {
+    font-size: 2.8em;
+    font-weight: 700;
+}
+
+.X-logo {
+    color: var(--x-color);
+    margin-right: 8px;
+}
+
+.O-logo {
+    color: var(--o-color);
+}
+
+.whos-turn {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 50px;
+    width: 150px;
+    text-transform: uppercase;
+    background-color: #243e49;
+    color: #a1b7c1;
+    border-radius: 7px;
+    box-shadow: 0px 5px #10202A;
+}
+
+.current-players-mark {
+    font-weight:900;
+    font-size: 1.5em;
+}
+
+.turn {
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.back-button {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #a1b7c1;
+    box-shadow: 0 5px rgb(72, 88, 95);
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.undo {
+    color: #1F3640;
+    font-size: 2em;
+}
+
+.back-button:hover {
+    border: 3px solid #c7e2ee;
+}
+
+.game-area-wrapper {
+    width: 85%;
+    margin:40px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-area {
+    width: inherit;
+    margin: auto;
+    display: grid;
+    gap: 30px 10px;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    align-items: center;
+    justify-items: center;
+}
+
+.square {
+    width: 125px;
+    height: 125px;
+    background-color: #26434f;
+    box-shadow: 0px 10px #10202A;
+    border-radius: 10px;
+}
+
+.game-square {
+    cursor: pointer;
+    width: inherit;
+    height: inherit;
+    background-color: #26434f;
+    border: none;
+    font-size: 4em;
+    border-radius: inherit;
+}
+
+.game-square:hover {
+    border: 3px solid #417185;
+}
+
+.bottom-part {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.bottom-results {
+    text-align: center;
+    width: 125px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    padding: .4em 0;
+    color: #15262A;
+}
+
+.number-result {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.you-won {
+    background-color: var(--x-color);
+}
+
+.tie {
+    background-color: #a1b7c1;
+}
+
+.opponent-won {
+    background-color: var(--o-color);
+}
