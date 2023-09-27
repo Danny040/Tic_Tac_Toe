@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="styles_2nd_page.css">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles_2nd_page.css">
+    <link rel="stylesheet" href="./popup-styles.css">
     <title>Tic Tac Toe</title>
 </head>
 <body>
@@ -36,7 +37,7 @@
     </div>
     <!--first page ends-->
     <!--second page starts-->
-    <div class="second-page-container">
+    <div class="second-page-container" style="display:none">
         <div class="top-part">
             <div class="x-o-logo">
                 <p class="X-logo logo-marks">X</p>
@@ -97,5 +98,22 @@
         </div>
     </div>
     <!--second page ends-->
+    <!--pop up page starts-->
+    <div class="pop-up-container">
+        <div class="game-outcome">
+            <div class="result-messages">
+                <p class="message-1">You won!</p>
+                <div class="message-2">
+                    <p class="one">X</p>
+                    <p class="two">takes the round</p>
+                </div>
+            </div>
+            <div class="options-after-round">
+                <button class="quit">quit</button>
+                <button class="next-round">next round</button>
+            </div>
+        </div>
+    </div>
+    <!--pop up page ends-->
 </body>
 </html>
