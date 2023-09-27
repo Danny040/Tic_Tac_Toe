@@ -1,3 +1,4 @@
+/*google fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&family=Ubuntu:wght@300&display=swap');
 
 *, *::after, *::before {
@@ -146,8 +147,7 @@ body {
     box-shadow: 0px 0px #663f9e;
 }
 
-
-
+/*smaller screens*/
 @media only screen and (max-width: 660px) {
     .choose-x-or-o {
         width: 90%;

@@ -1,0 +1,107 @@
+:root {
+    --x-color: #a55eea;
+    --o-color: #26de81;
+}
+
+.pop-up-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.game-outcome {
+    width: 80%;
+    height: 40vh;
+    margin: auto;
+    background-color: #1F3640;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 10px;
+}
+
+.result-messages {
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #AFC6D0;
+}
+
+.message-2 {
+    margin: auto;
+    width: 60%;
+    font-size: 2em;
+}
+
+.message-2 .one {
+    font-size: 2.2em;
+    font-weight: bold;
+}
+
+.quit {
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    border: none;
+    background-color: #a1b7c1;
+    box-shadow: 0 5px rgb(72, 88, 95);
+    text-transform: uppercase;
+    font-size: 1.3em;
+    font-weight: 500;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.quit:hover{
+    border: 3px solid #bfd8e4;
+}
+
+.next-round {
+    width: 180px;
+    height: 40px;
+    cursor: pointer;
+    border: none;
+    background-color: var(--o-color);
+    box-shadow: 0 5px #20bf6b;
+    text-transform: uppercase;
+    font-size: 1.3em;
+    font-weight: 500;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.next-round:hover {
+    border: 3px solid #38f898;
+}
+
+/*smaller screens*/
+@media only screen and (max-width: 758px) {
+    .game-outcome {
+        width: 90%;
+        height: 50vh;
+    }
+
+    .message-2 {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 385px) {
+    .quit {
+        width: 80px;
+        height: 40px;
+        font-size: 1.1em;
+        margin-right: 5px;
+    }
+
+    .next-round {
+        width: 160px;
+        height: 40px;
+        font-size: 1.1em;
+        margin-left: 5px;
+    }
+}
