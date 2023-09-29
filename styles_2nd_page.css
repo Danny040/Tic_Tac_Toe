@@ -119,6 +119,28 @@
     font-size: 4em;
     border-radius: inherit;
 }
+/*toggled classes*/
+.x-move {
+    text-transform: uppercase;
+    color: var(--x-color);
+    font-weight: bold;
+}
+
+.o-move {
+    text-transform: uppercase;
+    color: var(--o-color);
+    font-weight: bold;
+}
+
+.square .winner-x {
+    background-color: var(--x-color);
+    color: #26434f;
+}
+
+.square .winner-o {
+    background-color: var(--o-color);
+    color: #26434f;
+}
 
 .game-square:hover {
     border: 3px solid #417185;

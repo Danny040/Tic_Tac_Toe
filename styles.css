@@ -90,14 +90,14 @@ body {
     border-radius: .2em;
 }
 
-.x {
-    color: #A9C0CA;
-    background-color: transparent;
-}
-
-.o {
+.first-player-mark .chosen {
     background-color: #A9C0CA;
     color: #16282F;
+}
+
+.o, .x {
+    color: #A9C0CA;
+    background-color: transparent;
 }
 
 .game-modes {

@@ -11,7 +11,7 @@
 </head>
 <body>
     <!--first page starts-->
-    <div class="first-page-container" style="display:none;">
+    <div class="first-page-container" id="first-page">
         <div class="name-marks-section">
             <h1 class="game-name">TIC <span>TAC</span> TOE</h1>
         </div>
@@ -20,31 +20,31 @@
                 Pick player 1's mark
             </h2>
             <div class="first-player-mark">
-                <button class="marks x">X</button>
-                <button class="marks o">O</button>
+                <button class="marks x chosen" id="x-player">X</button>
+                <button class="marks o" id="o-player">O</button>
             </div>
             <p class="rule-reminder">Remember: X goes first</p>
         </div>
         <div class="game-modes">
             <div class="mode-button-wrapper1">
-                <button class="mode-buttons single-player">New Game (vs cpu)</button>
+                <button class="mode-buttons single-player" id="vs-cpu">New Game (vs cpu)</button>
             </div>
             <div class="mode-button-wrapper2">
-                <button class="mode-buttons two-players">New Game (vs player)</button>
+                <button class="mode-buttons two-players" id="vs-human">New Game (vs player)</button>
             </div>
             
         </div>
     </div>
     <!--first page ends-->
     <!--second page starts-->
-    <div class="second-page-container" style="display:none">
+    <div class="second-page-container" style="display:none" id="second-page">
         <div class="top-part">
             <div class="x-o-logo">
                 <p class="X-logo logo-marks">X</p>
                 <p class="O-logo logo-marks">O</p>
             </div>
             <div class="whos-turn">
-                <p class="current-players-mark">X</p>
+                <p class="current-players-mark" id="turn">X</p>
                 <p class="turn">Turn</p>
             </div>
             <div class="back-button">
@@ -54,52 +54,52 @@
         <div class="game-area-wrapper">
             <div class="game-area">
                 <div class="square">
-                    <button class="game-square">X</button>
+                    <button class="game-square" id="1" value="1"></button>
                 </div>
                 <div class="square">
-                    <button class="game-square">O</button>
+                    <button class="game-square" id="2" value="2"></button>
                 </div>
                 <div class="square">
-                    <button class="game-square">X</button>
+                    <button class="game-square" id="3" value="3"></button>
                 </div>
                 <div class="square">
-                    <button class="game-square">O</button>
+                    <button class="game-square" id="4" value="4"></button>
                 </div>
                 <div class="square">
-                    <button class="game-square">X</button>
+                    <button class="game-square" id="5" value="5"></button>
                 </div>
                 <div class="square">
-                    <button class="game-square">O</button>
+                    <button class="game-square" id="6" value="6"></button>
                 </div>
                 <div class="square">
-                    <button class="game-square">X</button>
+                    <button class="game-square" id="7" value="7"></button>
                 </div>
                 <div class="square">
-                    <button class="game-square">O</button>
+                    <button class="game-square" id="8" value="8"></button>
                 </div>
                 <div class="square">
-                    <button class="game-square">X</button>
+                    <button class="game-square" id="9" value="9"></button>
                 </div>
             </div>
         </div>
         <div class="bottom-part">
             <div class="you-won bottom-results">
                 <p class="you">X (you)</p>
-                <p class="won-times number-result">34</p>
+                <p class="won-times number-result" id="won-number">0</p>
             </div>
             <div class="tie bottom-results">
                 <p class="ties">Ties</p>
-                <p class="tie-times number-result">40</p>
+                <p class="tie-times number-result" id="tie-number">0</p>
             </div>
             <div class="opponent-won bottom-results">
                 <p class="opponent">O (cpu)</p>
-                <p class="lost-times number-result">20</p>
+                <p class="lost-times number-result" id="lost-number">0</p>
             </div>
         </div>
     </div>
     <!--second page ends-->
     <!--pop up page starts-->
-    <div class="pop-up-container">
+    <div class="pop-up-container" style="display:none;" id="popup-window">
         <div class="game-outcome">
             <div class="result-messages">
                 <p class="message-1">You won!</p>
@@ -115,5 +115,8 @@
         </div>
     </div>
     <!--pop up page ends-->
+    <script type="module" src="./page1_app.js"></script>
+    <script type="module" src="./gameMode1_app.js"></script>
+    <script type="module" src="./gameMode2_app.js"></script>
 </body>
 </html>
