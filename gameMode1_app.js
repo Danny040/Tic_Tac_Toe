@@ -1,35 +1,25 @@
-const gameProcess = new Map([
-    ["1", ""],
-    ["2", ""],
-    ["3", ""],
-    ["4", ""],
-    ["5", ""],
-    ["6", ""],
-    ["7", ""],
-    ["8", ""],
-    ["9", ""],
-]);
+const gameMoves = ["", "", "", "", "", "", "", "", ""];
+const winningCombinations = ["012", "345", "678", "036", "258", "048", "246"];
 
 const turnTxt = document.getElementById("turn");
 let turn = "x";
 const gameSquares = document.querySelectorAll(".game-square");
 
-export function cpuGame(playersMarks) {
 
-    if (playersMarks.get("playerOne") === "o") {
-        cpuMove();
-    }
-    else {
-        humanMove();
-    }
+export function cpuGame(playersMarks) {
+    console.log("inside cpuGame");
+    humanMove();
+
+
 }
 
 function updateSquare(square, value) {
-    if (gameProcess.get(value) !== "") {
+    console.log("inside update function");
+    if (gameMoves[value] !== "") {
         alert("This is taken.");
         return;
     }
-    gameProcess.set(value, turn);
+    gameMoves[value] = turn;
     square.innerHTML = turn;
     square.classList.add(`${turn}-move`);
     if ( turn === "x") {
@@ -39,17 +29,40 @@ function updateSquare(square, value) {
         turn = "x";
     }
     turnTxt.innerHTML = turn;
+    result = checkGameOutcome();
 }
 
 function cpuMove() {
-    let move = Math.floor(Math.random() * 11);
+    console.log("inside cpu move");
+    let flag = 1;
+    do {
+        let move = Math.floor(Math.random() * 10); //it's a square in which it will put its mark
+        if(gameMoves[move] === "") {
+            updateSquare(gameSquares[move], move);
+            flag = 0;
+        }
+    } while (flag);
     
 }
 
 function humanMove() {
+    console.log("inside humanMove");
     gameSquares.forEach((square) => {
         square.addEventListener("click",() =>{
             updateSquare(square, square.value);
         });
     });
+}
+
+function checkGameOutcome() {
+    console.log("inside game check");
+    let returnValue = 0;
+    for(let combination of winningCombinations) {
+        if(gameMoves[combination[0]] === gameMoves[combination[1]] && gameMoves[combination[0]] === gameMoves[combination[3]] && gameMoves[combination[0]] !== "") {
+            if(gameMoves[combination[0]] === "x") return 1;
+            return 2;
+        }
+        if(gameMoves[combination[0]] === "" || gameMoves[combination[1]] === "" || gameMoves[combination[3]] === "") returnValue = 3;
+    }
+    return returnValue;
 }

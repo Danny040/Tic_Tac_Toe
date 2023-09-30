@@ -47,12 +47,12 @@
                 <p class="current-players-mark" id="turn">X</p>
                 <p class="turn">Turn</p>
             </div>
-            <div class="back-button">
-                <span class="material-symbols-outlined undo">undo</span>
-            </div>
         </div>
         <div class="game-area-wrapper">
             <div class="game-area">
+                <div class="square">
+                    <button class="game-square" id="0" value="0"></button>
+                </div>
                 <div class="square">
                     <button class="game-square" id="1" value="1"></button>
                 </div>
@@ -77,14 +77,11 @@
                 <div class="square">
                     <button class="game-square" id="8" value="8"></button>
                 </div>
-                <div class="square">
-                    <button class="game-square" id="9" value="9"></button>
-                </div>
             </div>
         </div>
         <div class="bottom-part">
             <div class="you-won bottom-results">
-                <p class="you">X (you)</p>
+                <p class="you">X <span id="player1">(Player 1)</span></p>
                 <p class="won-times number-result" id="won-number">0</p>
             </div>
             <div class="tie bottom-results">
@@ -92,28 +89,28 @@
                 <p class="tie-times number-result" id="tie-number">0</p>
             </div>
             <div class="opponent-won bottom-results">
-                <p class="opponent">O (cpu)</p>
+                <p class="opponent">O <span id="player2">(Player 2)</span></p>
                 <p class="lost-times number-result" id="lost-number">0</p>
             </div>
         </div>
     </div>
     <!--second page ends-->
-    <!--pop up page starts-->
-    <div class="pop-up-container" style="display:none;" id="popup-window">
-        <div class="game-outcome">
-            <div class="result-messages">
-                <p class="message-1">You won!</p>
-                <div class="message-2">
-                    <p class="one">X</p>
-                    <p class="two">takes the round</p>
+    <!--pop up page starts-->  
+        <div class="pop-up-container" style="display:none;" id="popup-window">
+            <div class="game-outcome">
+                <div class="result-messages">
+                    <p class="message-1" id="the-winner"></p>
+                    <div class="message-2">
+                        <p class="one" id="winner-mark"></p>
+                        <p class="two">takes the round</p>
+                    </div>
+                </div>
+                <div class="options-after-round">
+                    <button class="quit" id="quit" onclick="location.reload()">quit</button>
+                    <button class="next-round" id="next-round" >next round</button>
                 </div>
             </div>
-            <div class="options-after-round">
-                <button class="quit">quit</button>
-                <button class="next-round">next round</button>
-            </div>
         </div>
-    </div>
     <!--pop up page ends-->
     <script type="module" src="./page1_app.js"></script>
     <script type="module" src="./gameMode1_app.js"></script>
