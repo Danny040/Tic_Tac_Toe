@@ -35,7 +35,7 @@ function switchCpuHuman() {
     if ((turn === "x" && x === "human" )||(turn === "o" && o === "human")) {
         return;
     }
-    setTimeout(cpuMove, 1100);
+    setTimeout(cpuMove, 500);
 }
 
 function updateSquare(square, value) {
