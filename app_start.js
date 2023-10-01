@@ -1,7 +1,6 @@
-import { cpuGame } from "./gameMode1_app.js";
-import { humanGame } from "./gameMode2_app.js";
+import { cpuGame } from "./game_mode_1.js";
+import { humanGame } from "./game_mode_2.js";
 
-// below data is exported and sets some game properties
 const playersMarks = new Map([
     ["playerOne", "x"],
     ["playerTwo", "o"]
@@ -47,7 +46,4 @@ humanGameMode.addEventListener("click", () => {
     humanGame(playersMarks);
 });
 
-function startHumanMode() {
-    
-}
 
