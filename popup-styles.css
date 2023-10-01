@@ -20,7 +20,7 @@
     width: 80%;
     height: 40vh;
     margin: auto;
-    background-color: #1F3640;
+    background-color: rgba(31, 54, 64, 0.9);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -62,24 +62,6 @@
 
 .quit:hover{
     border: 3px solid #bfd8e4;
-}
-
-.next-round {
-    width: 180px;
-    height: 40px;
-    cursor: pointer;
-    border: none;
-    background-color: var(--o-color);
-    box-shadow: 0 5px #20bf6b;
-    text-transform: uppercase;
-    font-size: 1.3em;
-    font-weight: 500;
-    border-radius: 5px;
-    margin-left: 10px;
-}
-
-.next-round:hover {
-    border: 3px solid #38f898;
 }
 
 /*smaller screens*/

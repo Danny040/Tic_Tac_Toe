@@ -80,17 +80,13 @@
             </div>
         </div>
         <div class="bottom-part">
-            <div class="you-won bottom-results">
-                <p class="you">X <span id="player1">(Player 1)</span></p>
-                <p class="won-times number-result" id="won-number">0</p>
+            <div class="players player-left player-x" id="player_1">
+                <p id="player1-name">Player 1</p>
+                <p class="player-1-mark" id="player-1-mark">x</p>
             </div>
-            <div class="tie bottom-results">
-                <p class="ties">Ties</p>
-                <p class="tie-times number-result" id="tie-number">0</p>
-            </div>
-            <div class="opponent-won bottom-results">
-                <p class="opponent">O <span id="player2">(Player 2)</span></p>
-                <p class="lost-times number-result" id="lost-number">0</p>
+            <div class="players player-right player-o" id="player_2">
+                <p id="player2-name">Player 2</p>
+                <p class="player-2-mark" id="player-2-mark">o</p>
             </div>
         </div>
     </div>
@@ -107,13 +103,12 @@
                 </div>
                 <div class="options-after-round">
                     <button class="quit" id="quit" onclick="location.reload()">quit</button>
-                    <button class="next-round" id="next-round" >next round</button>
                 </div>
             </div>
         </div>
     <!--pop up page ends-->
-    <script type="module" src="./page1_app.js"></script>
-    <script type="module" src="./gameMode1_app.js"></script>
-    <script type="module" src="./gameMode2_app.js"></script>
+    <script type="module" src="./app_start.js"></script>
+    <script type="module" src="./game_mode_1.js"></script>
+    <script type="module" src="./game_mode_2.js"></script>
 </body>
 </html>

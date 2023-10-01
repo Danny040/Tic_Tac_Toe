@@ -5,18 +5,19 @@ let turn = "x";
 const gameSquares = document.querySelectorAll(".game-square");
 let x = 'Player 1';
 let o = 'Player 2';
-const gameResults = [0, 0, 0]; // x, tie, o
 
 export function humanGame(playersMarks) {
-    console.log("inside human game: ");
     if(playersMarks.get("playerOne") == 'o') {
-        document.getElementById("player1").innerHTML = "(Player 2)";
-        document.getElementById("player2").innerHTML = "(Player 1)";
         x = 'Player 2';
         o = 'Player 1';
+        document.getElementById("player-1-mark").innerHTML = "o";
+        document.getElementById("player-2-mark").innerHTML = "x";
+        document.getElementById("player_1").classList.remove("player-x");
+        document.getElementById("player_1").classList.add("player-o");
+        document.getElementById("player_2").classList.remove("player-o")
+        document.getElementById("player_2").classList.add("player-x");
     }
 
-    
     gameSquares.forEach((square) => {
         square.addEventListener("click",() =>{
             updateSquare(square, square.value);
@@ -52,8 +53,11 @@ function checkGameOutcome() {
             showWhoWon(2, combination); // o won
             return;
         }
-        
     }
+    for(let i = 0; i < 9; i++) {
+        if(gameMoves[i] === "") return;
+    }
+    showWhoWon(3, "000");
 }
 
 function showWhoWon(result, squaresNumber) {
@@ -64,15 +68,9 @@ function showWhoWon(result, squaresNumber) {
                 gameSquares[i].classList.add("winner-x");
             }
         }
-        gameResults[0] += 1;
         document.getElementById("popup-window").style.display = "flex";
         document.getElementById("winner-mark").innerHTML = 'X';
         document.getElementById("the-winner").innerHTML = x;
-        document.getElementById("won-number").innerHTML = gameResults[0];
-        // document.getElementById("next-round").addEventListener("click",() => {
-        //     location.reload();
-        //     start();
-        // });
     }
     else if (result === 2) {
         for (let i = 0; i < numberOfButtons; i++) {
@@ -80,10 +78,13 @@ function showWhoWon(result, squaresNumber) {
                 gameSquares[i].classList.add("winner-o");
             }
         }
-        gameResults[2] += 1;
         document.getElementById("popup-window").style.display = "flex";
         document.getElementById("winner-mark").innerHTML = 'O';
         document.getElementById("the-winner").innerHTML = o;
-        document.getElementById("lost-number").innerHTML = gameResults[2];
+    }
+    else if (result === 3) {
+        document.getElementById("winner-mark").innerHTML = "No one";
+        document.getElementById("the-winner").innerHTML = "tie";
+        document.getElementById("popup-window").style.display = "flex";
     }
 }
