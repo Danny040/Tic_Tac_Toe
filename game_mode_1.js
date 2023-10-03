@@ -60,7 +60,6 @@ function updateSquare(square, value) {
 function cpuMove() {
     for(let combination of winningCombinations) {
         if((gameMoves[combination[0]] === gameMoves[combination[1]] &&  gameMoves[combination[2]] === "" && gameMoves[combination[1]] !== "") || (gameMoves[combination[0]] === gameMoves[combination[2]] && gameMoves[combination[1]] === "" && gameMoves[combination[0]] != "") || (gameMoves[combination[1]] === gameMoves[combination[2]] && gameMoves[combination[0]] === "" && gameMoves[combination[2]] != "" )) {
-                console.log("combination after long statement: " + combination);
                 if (gameMoves[combination[0]] === "") {
                     updateSquare(gameSquares[combination[0]], combination[0]);
                     return;
@@ -79,7 +78,6 @@ function cpuMove() {
 }
 
 function randomMove() {
-    console.log("random");
     while(true) { 
         let move = Math.floor(Math.random() * 10); //it's a square in which it will put its mark
         if(gameMoves[move] === "") {
