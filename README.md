@@ -4,21 +4,14 @@ A classic Tic-Tac-Toe game built using HTML, CSS, and Vanilla JavaScript. This p
 ---
 
 # Features
-- Two Game Modes:
-
-  - Player vs Computer: Play against a basic AI opponent.
-
-  - Player vs Player: Two human players can take turns on the same device.
-
-- Simple, responsive interface
-
-- Reset and replay functionality
-
+* Two Game Modes:
+*   Player vs Computer: Play against a basic AI opponent.
+*   Player vs Player: Two human players can take turns on the same device.
+* Simple, responsive interface
+* Reset and replay functionality
 ---
 
 # Learning Focus
-- Game state management using plain JavaScript
-
-- Interactive UI updates via DOM
-
-- Handling user input and game outcomes (win/draw)
+* Game state management using plain JavaScript
+* Interactive UI updates via DOM
+* Handling user input and game outcomes (win/draw)
